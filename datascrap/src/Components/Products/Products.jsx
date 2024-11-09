@@ -13,7 +13,7 @@ const ProductCard = ({ product } , ) => {
 
 
 return(
-    <div className="  rounded-lg shadow-xl border-2 bg-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay={product.id * 200} key={product.id}>
+    <div className="  rounded-lg shadow-xl border-2 bg-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay={product.id*200} key={product.id}>
     <img  onClick={handleProductClick}  className="w-full h-48 object-cover  overflow-hidden transition-transform transform hover:scale-105  rounded-t-md" src={product.image} alt={product.name} />
     <div className="p-3 flex-1">
       <h3 className="text-lg font-semibold"
