@@ -4,9 +4,17 @@ import {productsData} from "../Server/api.js"
 import Footer from '../Footer/Footer.jsx'
 
 
-const ProductCard = ({ product }) => (
+const ProductCard = ({ product } , ) => {
+  const navigate = useNavigate();
+
+  const handleProductClick = () => {
+    navigate(`/product/${product.id}`);
+  };
+
+
+return(
     <div className="  rounded-lg shadow-xl border-2 bg-gray-100 flex flex-col" data-aos="fade-up" data-aos-delay={product.id * 200} key={product.id}>
-    <img className="w-full h-48 object-cover  overflow-hidden transition-transform transform hover:scale-105  rounded-t-md" src={product.image} alt={product.name} />
+    <img  onClick={handleProductClick}  className="w-full h-48 object-cover  overflow-hidden transition-transform transform hover:scale-105  rounded-t-md" src={product.image} alt={product.name} />
     <div className="p-3 flex-1">
       <h3 className="text-lg font-semibold"
       style={{
@@ -31,7 +39,7 @@ const ProductCard = ({ product }) => (
     </div>
   </div>
   
-)
+)}
 
 const Products = () => {
   const navigate = useNavigate()
@@ -39,6 +47,8 @@ const Products = () => {
   const handleExploreMore = (category) => {
     navigate(`/category/${category}`)
   }
+
+  
 //   bg-[#ffebcd]
   return (
     <div className="  bg-[#f8a2200c] ">

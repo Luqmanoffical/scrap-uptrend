@@ -1,12 +1,18 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams,  useNavigate } from 'react-router-dom'
 import { productsData } from '../Server/api' 
 import Footer from '../Footer/Footer.jsx'
 
 const CategoryPage = () => {
   const { category } = useParams()
-
   const products = productsData[category] || []
+  const navigate = useNavigate();
+
+  const handleProductClick = (productId) => {
+    navigate(`/product/${productId}`);
+  };
+
+  
 
   return (
     <div className='bg-[#f8a2200c]' >
@@ -20,7 +26,7 @@ const CategoryPage = () => {
         {products.map(product => (
 
         <div className="  rounded-lg shadow-xl border-2  bg-gray-100 flex flex-col"  key={product.id}>
-        <img className="w-full h-48 object-cover  overflow-hidden transition-transform transform hover:scale-105  rounded-t-md" src={product.image} alt={product.name} />
+        <img   onClick={() => handleProductClick(product.id)} className="w-full h-48 object-cover  overflow-hidden transition-transform transform hover:scale-105  rounded-t-md" src={product.image} alt={product.name} />
         <div className="p-3 flex-1">
           <h3 className="text-lg font-semibold"
           style={{
