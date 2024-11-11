@@ -33,7 +33,7 @@ const filteredProducts = products.filter((product) => {
 
 
   return (
-    <div className="bg-[#f8a2200c]">
+    <div className="bg-gray-200 ">
       <div className="p-7">
         <div className='flex justify-between'>
         <h1
