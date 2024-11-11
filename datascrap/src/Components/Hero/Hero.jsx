@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {
-  FaBars, FaTimes, FaSearch, FaTshirt, FaLaptop, FaShoePrints,
-  FaHatCowboy, FaGift, FaBox, FaClock, FaHeadphones,
-  FaHeart, FaMobileAlt, FaStar, FaCogs
+FaBars, FaTimes, FaSearch, FaTshirt, FaLaptop, FaShoePrints,
+FaHatCowboy, FaGift, FaBox, FaClock, FaHeadphones,
+FaHeart, FaMobileAlt, FaStar, FaCogs
 } from "react-icons/fa";
 import logo from '../../assets/logo.png'
 import Image1 from "../../assets/women.png";
