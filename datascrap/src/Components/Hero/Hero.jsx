@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
 import '../Css/Home.css'
-
+import { useNavigate } from "react-router-dom";
 import VideoSection from "./VideoSection";
 
 const slidesData = [
@@ -92,10 +92,14 @@ const Hero = ({ handleOrderPopup }) => {
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-
+ const navigate =useNavigate();
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+  function handleSearchQuery(){
+
+    console.log(searchQuery);
+  }
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -117,8 +121,9 @@ const Navbar = () => {
           placeholder="Search for products..."
           className="w-full pl-12 pr-7 py-4 rounded-full bg-gray-700 text-white focus:outline-none"
         />
+        <button onClick={handleSearchQuery}>
         <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white" size={20} />
-      </div>
+        </button>  </div>
     </div>
     <button onClick={toggleSidebar} className="text-white p-2 rounded-full hover:bg-gray-700">
       {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
