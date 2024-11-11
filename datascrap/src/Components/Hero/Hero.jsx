@@ -66,8 +66,8 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-200 flex justify-center items-center">
-      <div className="h-[750px] w-[750px] bg-gradient-to-r from-[#000000e3] via-[#e49836e3] absolute -inset-y-8 -right-32 rounded-3xl transform rotate-45 z-0"></div>
+    <div className="relative overflow-hidden min-h-[550px] lg:min-h-[400px] sm:min-h-[650px] bg-gray-200 flex justify-center items-center">
+      <div className="h-[750px] w-[750px] bg-gradient-to-r from-[#000000e3] via-[#e49836e3] absolute -inset-y-8 -right-32 -top-40 rounded-3xl transform rotate-45 z-0"></div>
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 opacity-40 z-0"></div>
       <div className="container pb-8 sm:pb-0 relative z-10">
         <Slider {...settings}>
