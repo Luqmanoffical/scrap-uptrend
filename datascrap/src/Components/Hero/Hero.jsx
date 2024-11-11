@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
 import './hero.css';
+import VideoSection from "./VideoSection";
 
 const slidesData = [
   {
@@ -151,7 +152,7 @@ const Navbar = () => {
       <Hero handleOrderPopup={() => {}} />
 
       <div className="bg-[#c8c9cab2]">
-        <div className="container ml-12">
+        <div className="container ml-20">
           <h2 className="text-2xl p-10 font-semibold text-center text-gray-800">
             Shop by Category
           </h2>
@@ -209,6 +210,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <VideoSection/>
     </div>
   );
 };
