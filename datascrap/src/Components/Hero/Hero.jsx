@@ -4,6 +4,7 @@ import {
   FaHatCowboy, FaGift, FaBox, FaClock, FaHeadphones,
   FaHeart, FaMobileAlt, FaStar, FaCogs
 } from "react-icons/fa";
+import logo from '../../assets/logo.png'
 import Image1 from "../../assets/women.png";
 import Image2 from "../../assets/shopping.png";
 import Image3 from "../../assets/sale.png";
@@ -99,44 +100,53 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav className="flex justify-between items-center bg-gray-800 p-4 text-white">
-        <div className="logo">
-          <h1 className="text-xl font-bold">Brand Logo</h1>
-        </div>
-        <div className="flex-1 flex justify-center mx-8">
-          <div className="relative w-full sm:w-96">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              placeholder="Search for products..."
-              className="w-full pl-12 pr-4 py-2 rounded-full bg-gray-700 text-white focus:outline-none"
-            />
-            <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white" size={20} />
-          </div>
-        </div>
-        <button onClick={toggleSidebar} className="text-white p-2 rounded-full hover:bg-gray-700">
-          {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
-      </nav>
+    <div className="relative">
+  <nav className="flex justify-between items-center bg-gray-800 p-4 text-white h-24">
+    <div className="logo flex items-center space-x-2">
+      <img src={logo} className="h-10" />
+      <h1 className="text-xl font-bold">UpTrend.</h1>
+    </div>
+    <div className="flex-1 flex justify-center mx-8">
+      <div className="relative w-full sm:w-96">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={handleSearchChange}
+          placeholder="Search for products..."
+          className="w-full pl-12 pr-7 py-4 rounded-full bg-gray-700 text-white focus:outline-none"
+        />
+        <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white" size={20} />
+      </div>
+    </div>
+    <button onClick={toggleSidebar} className="text-white p-2 rounded-full hover:bg-gray-700">
+      {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+    </button>
+  </nav>
 
-      {sidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-end">
-          <div className="w-64 bg-black text-white p-6 space-y-4">
-            <h2 className="text-2xl font-bold">Categories</h2>
-            <ul>
-              <li><a href="#" className="block py-2">Men's Wear</a></li>
-              <li><a href="#" className="block py-2">Women's Wear</a></li>
-              <li><a href="#" className="block py-2">Accessories</a></li>
-              <li><a href="#" className="block py-2">Sale</a></li>
-            </ul>
-            <button onClick={toggleSidebar} className="absolute top-4 left-4 text-white">
-              <FaTimes size={24} />
-            </button>
-          </div>
-        </div>
-      )}
+  {/* Sidebar with Animation */}
+  <div
+    className={`fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-end transform transition-all duration-300 ${
+      sidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+    }`}
+  >
+    <div
+      className={`w-64 bg-black text-white p-6 space-y-4 transform transition-transform duration-300 ${
+        sidebarOpen ? 'translate-x-0' : 'translate-x-full'
+      }`}
+    >
+      <h2 className="text-2xl font-bold">Categories</h2>
+      <ul>
+        <li><a href="#" className="block py-2">Men's Wear</a></li>
+        <li><a href="#" className="block py-2">Women's Wear</a></li>
+        <li><a href="#" className="block py-2">Accessories</a></li>
+        <li><a href="#" className="block py-2">Sale</a></li>
+      </ul>
+      <button onClick={toggleSidebar} className="absolute top-4 right-4 text-white " >
+        <FaTimes size={24} />
+      </button>
+    </div>
+  </div>
+
 
       <Hero handleOrderPopup={() => {}} />
 
