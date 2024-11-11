@@ -52,7 +52,7 @@ const Products = () => {
   
 //   bg-[#ffebcd]
   return (
-    <div className="  bg-[#f8a2200c] ">
+    <div className="  bg-gray-200  ">
 <div className='px-4'>
 {/*  */}
 <div className="pt-12">
