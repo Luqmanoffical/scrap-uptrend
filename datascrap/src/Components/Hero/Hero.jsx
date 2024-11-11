@@ -70,7 +70,7 @@ const Hero = ({ handleOrderPopup }) => {
 
   return (
     <div className="relative overflow-hidden min-h-[550px] lg:min-h-[400px] sm:min-h-[650px] bg-gray-200 flex justify-center items-center">
-      <div className="h-[750px] w-[750px] bg-gradient-to-r from-[#000000e3] via-[#e49836e3] absolute -inset-y-8 -right-32 -top-40 rounded-3xl transform rotate-45 z-0"></div>
+      <div className="h-[750px] w-[750px] bg-gradient-to-r from-[#ecb454] via-[#ecb454] absolute -inset-y-8 -right-32 -top-40 rounded-3xl transform rotate-45 z-0"></div>
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 opacity-40 z-0"></div>
       <div className="container pb-8 sm:pb-0 relative z-10">
         <Slider {...settings}>
@@ -126,13 +126,20 @@ const Navbar = () => {
   </nav>
 
 
-  <nav className="flex justify-between items-center bg-gradient-to-r  via-[#e49836e3] from-[#413232e3]  p-4 text-white h-10">
-    <div className="logo flex items-center space-x-2">
-    
-    </div>
-   
-   
-  </nav>
+  <nav className="flex justify-between items-center bg-[#c8c9ca] p-4  h-10">
+  
+  
+  <ul className="flex flex-1 justify-center gap-8 space-x-6 font-bold">
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Home</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Shop</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Categories</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Deals</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Contact Us</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Cart</a></li>
+  </ul>
+</nav>
+
+
 
 
 
