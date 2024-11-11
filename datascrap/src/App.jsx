@@ -6,6 +6,8 @@ import Products from './Components/Products/Products';
 import CategoryPage from './Components/CategoryPage/CategoryPage';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from './Components/ScrollToTop';
+import ProductDetail from "./Components/Products/ProductDetail"
 
 function App() {
   React.useEffect(() => {
@@ -19,11 +21,13 @@ function App() {
   }, []);
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hero" element={<Hero />} />
         <Route path="/products" element={<Products />} />
         <Route path="/category/:category" element={<CategoryPage />} />
+        <Route path="/product/:productId" element={<ProductDetail />} />
       </Routes>
     </Router>
   );
