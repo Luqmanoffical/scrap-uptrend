@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {productsData} from "../Server/api.js"
 import Footer from '../Footer/Footer.jsx'
+import '../Hero/hero.css'
 
 
 const ProductCard = ({ product } , ) => {
@@ -33,7 +34,7 @@ return(
       </div>
     </div>
     <div className="p-3  flex justify-between">
-      <button className=" px-4 py-2 bg-[#d4af37]  hover:bg-[#b8972f] text-white rounded-lg transition-transform transform hover:scale-105" >
+      <button className=" gradient-button" >
         Visit Store
       </button>
     </div>

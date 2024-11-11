@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { productsData } from '../Server/api';
 import Footer from '../Footer/Footer.jsx';
+import '../Hero/hero.css'
 
 const CategoryPage = () => {
   const { category } = useParams();

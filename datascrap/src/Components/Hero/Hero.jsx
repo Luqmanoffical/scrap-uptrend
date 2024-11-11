@@ -152,6 +152,22 @@ const Navbar = () => {
         <li><a href="#" className="block py-2">Women's Wear</a></li>
         <li><a href="#" className="block py-2">Accessories</a></li>
         <li><a href="#" className="block py-2">Sale</a></li>
+        <li><a href="#" className="block py-2">Men's Wear</a></li>
+        <li><a href="#" className="block py-2">Women's Wear</a></li>
+        <li><a href="#" className="block py-2">Accessories</a></li>
+        <li><a href="#" className="block py-2">Sale</a></li>
+        <li><a href="#" className="block py-2">Men's Wear</a></li>
+        <li><a href="#" className="block py-2">Women's Wear</a></li>
+        <li><a href="#" className="block py-2">Accessories</a></li>
+        <li><a href="#" className="block py-2">Sale</a></li>
+        <li><a href="#" className="block py-2">Men's Wear</a></li>
+        <li><a href="#" className="block py-2">Women's Wear</a></li>
+        <li><a href="#" className="block py-2">Accessories</a></li>
+        <li><a href="#" className="block py-2">Sale</a></li>
+        <li><a href="#" className="block py-2">Men's Wear</a></li>
+        <li><a href="#" className="block py-2">Women's Wear</a></li>
+       
+      
       </ul>
       <button onClick={toggleSidebar} className="absolute top-4 right-4 text-white " >
         <FaTimes size={24} />
