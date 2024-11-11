@@ -102,7 +102,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-  <nav className="flex justify-between items-center bg-gray-800 p-4 text-white h-24">
+  <nav className="flex justify-between items-center bg-gray-800 p-4 text-white h-20">
     <div className="logo flex items-center space-x-2">
       <img src={logo} className="h-10" />
       <h1 className="text-xl font-bold">UpTrend.</h1>
@@ -123,6 +123,17 @@ const Navbar = () => {
       {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
     </button>
   </nav>
+
+
+  <nav className="flex justify-between items-center bg-gradient-to-r  via-[#e49836e3] from-[#413232e3]  p-4 text-white h-10">
+    <div className="logo flex items-center space-x-2">
+    
+    </div>
+   
+   
+  </nav>
+
+
 
   {/* Sidebar with Animation */}
   <div
