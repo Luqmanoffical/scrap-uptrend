@@ -3,41 +3,39 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { productsData } from '../Server/api';
 import Footer from '../Footer/Footer.jsx';
+import { FaFilter } from "react-icons/fa";
 
 const CategoryPage = () => {
   const { category } = useParams();
   const navigate = useNavigate();
 
-  // Initialize product data
   const products = productsData[category] || [];
 
-  // State for filters
+  
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(1000);
+  const [maxPrice, setMaxPrice] = useState(10000);
   const [onlyFreeShipping, setOnlyFreeShipping] = useState(false);
-  const [showFilters, setShowFilters] = useState(false); // For showing/hiding the filter dropdown
+  const [showFilters, setShowFilters] = useState(false); 
 
-  // Handle the product click
   const handleProductClick = (productId) => {
     navigate(`/product/${productId}`);
   };
 
-  // Function to check if price is within range
-  const isPriceInRange = (product) => {
-    const productPrice = parseFloat(product.price.replace('$', ''));
-    return productPrice >= minPrice && productPrice <= maxPrice;
-  };
+const isPriceInRange = (product) => {
+  const productPrice = parseFloat(product.price.replace('$',"").replace(/,/g, ''));
+  return productPrice >= minPrice && productPrice <= maxPrice;
+};
+const filteredProducts = products.filter((product) => {
+  const withinPriceRange = isPriceInRange(product);
+  const isFreeShipping = onlyFreeShipping ? product.shippingFee === 'Free' : true;
+  return withinPriceRange && isFreeShipping;
+});
 
-  // Filter products based on price and free shipping
-  const filteredProducts = products.filter((product) => {
-    const withinPriceRange = isPriceInRange(product);
-    const isFreeShipping = onlyFreeShipping ? product.shippingFee === 'Free' : true;
-    return withinPriceRange && isFreeShipping;
-  });
 
   return (
     <div className="bg-[#f8a2200c]">
       <div className="p-7">
+        <div className='flex justify-between'>
         <h1
           className="text-3xl text-gray-950 font-bold mb-6"
           style={{
@@ -47,15 +45,16 @@ const CategoryPage = () => {
           Trending in {category.replace(/([A-Z])/g, ' $1').toUpperCase()}
         </h1>
 
-        {/* Filter Button and Dropdown */}
-        <div className="mb-6">
+        
           <button
             className="px-4 py-2 bg-[#d4af37] hover:bg-[#b8972f] text-white rounded-lg mb-4 transition-transform transform hover:scale-105"
             onClick={() => setShowFilters(!showFilters)}
           >
-            {showFilters ? 'Hide Filters' : 'Show Filters'}
+            {showFilters ? <FaFilter /> : <FaFilter />}
           </button>
-
+</div>
+<div>
+        
           {showFilters && (
             <div className="bg-white p-4 rounded-lg shadow-md">
               <h2 className="text-xl font-semibold mb-4">Filter Products</h2>
