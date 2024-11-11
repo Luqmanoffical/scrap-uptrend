@@ -57,7 +57,7 @@ const Products = () => {
 <div className="pt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Electronics items</h1>
+       }} className="text-2xl font-bold mb-4"> Electronics items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.electronics.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -79,7 +79,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Clothing items</h1>
+       }} className="text-2xl font-bold mb-4"> Clothing items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.clothing.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -99,7 +99,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Home Appliances items</h1>
+       }} className="text-2xl font-bold mb-4"> Home Appliances items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.home_appliances.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -120,7 +120,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Sports items</h1>
+       }} className="text-2xl font-bold mb-4"> Sports items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.sports.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -140,7 +140,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Beauty Products items</h1>
+       }} className="text-2xl font-bold mb-4"> Beauty Products items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.beauty.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -160,7 +160,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Books items</h1>
+       }} className="text-2xl font-bold mb-4"> Books items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.books.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -180,7 +180,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Toys items</h1>
+       }} className="text-2xl font-bold mb-4"> Toys items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.toys.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -201,7 +201,7 @@ const Products = () => {
 <div className="mt-12">
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Furniture items</h1>
+       }} className="text-2xl font-bold mb-4"> Furniture items</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.furniture.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />
@@ -222,7 +222,7 @@ const Products = () => {
       <div>
          <h1   style={{
         fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-2xl font-bold mb-4">Trending in Food </h1>
+       }} className="text-2xl font-bold mb-4"> Food </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productsData.food.slice(0, 4).map(product => (
             <ProductCard key={product.id} product={product} />

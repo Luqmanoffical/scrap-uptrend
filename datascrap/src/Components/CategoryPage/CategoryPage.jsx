@@ -42,7 +42,7 @@ const filteredProducts = products.filter((product) => {
             fontFamily: 'Faculty Glyphic, Mona Sans, Roboto, sans-serif',
           }}
         >
-          Trending in {category.replace(/([A-Z])/g, ' $1').toUpperCase()}
+          {category.replace(/([A-Z])/g, ' $1').toUpperCase()}
         </h1>
 
         
