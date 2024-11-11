@@ -101,7 +101,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
   <nav className="flex justify-between items-center bg-gray-800 p-4 text-white h-24">
     <div className="logo flex items-center space-x-2">
       <img src={logo} className="h-10" />

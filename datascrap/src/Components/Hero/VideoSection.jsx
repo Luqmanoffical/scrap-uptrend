@@ -4,7 +4,7 @@ import './Hero.css'
 
 const VideoSection = () => {
   return (
-    <div className="relative bg-gray-800 h-[300px] flex items-center justify-center">
+    <div className="relative bg-gray-800 h-[300px]  flex items-center justify-center">
       {/* Background Video */}
       <video
         src={shoppingads} // Update this path to the actual video file path
