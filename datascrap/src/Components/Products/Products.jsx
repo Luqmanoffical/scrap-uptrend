@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {productsData} from "../Server/api.js"
 import Footer from '../Footer/Footer.jsx'
-import '../Hero/hero.css'
+import '../Css/Home.css'
 
 
 const ProductCard = ({ product } , ) => {

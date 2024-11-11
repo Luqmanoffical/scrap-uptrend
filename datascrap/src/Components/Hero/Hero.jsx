@@ -12,7 +12,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
-import "../Css/Home.css";
+import '../Css/Home.css'
 
 import VideoSection from "./VideoSection";
 
@@ -179,39 +179,40 @@ const Navbar = () => {
 
       <Hero handleOrderPopup={() => {}} />
 
-      <div className="bg-[#c8c9cab2]">
-        <div className="container ml-20">
-          <h2 className="text-2xl p-10 font-semibold text-center text-gray-800">
-            Shop by Category
-          </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
-            {[
-              { icon: <FaTshirt size={30} />, label: "Men's Wear" },
-              { icon: <FaLaptop size={30} />, label: "Electronics" },
-              { icon: <FaShoePrints size={30} />, label: "Footwear" },
-              { icon: <FaHatCowboy size={30} />, label: "Accessories" },
-              { icon: <FaGift size={30} />, label: "Gifts" },
-              { icon: <FaBox size={30} />, label: "Home" },
-              { icon: <FaClock size={30} />, label: "Watches" },
-              { icon: <FaHeadphones size={30} />, label: "Headphones" },
-              { icon: <FaHeart size={30} />, label: "Health" },
-              { icon: <FaMobileAlt size={30} />, label: "Mobile Phones" },
-              { icon: <FaStar size={30} />, label: "Top Rated" },
-              { icon: <FaCogs size={30} />, label: "Tools" },
-              { icon: <FaHeart size={30} />, label: "Health" },
-              { icon: <FaMobileAlt size={30} />, label: "Mobile Phones" },
-              { icon: <FaStar size={30} />, label: "Top Rated" },
-              { icon: <FaCogs size={30} />, label: "Tools" }
-            ].map((category, index) => (
-              <div key={index} className="flex flex-col items-center text-gray-800">
-                <div className="p-4 bg-gray-200 rounded-full shadow-lg mb-2">
-                  {category.icon}
-                </div>
-                <span className="text-sm font-medium">{category.label}</span>
-              </div>
-            ))}
-          </div>
+      <div className="bg-[#c8c9cab2]  ">
+      <div className="container mx-auto flex flex-col items-center">
+  <h2 className="text-2xl p-10 font-semibold text-center text-gray-800">
+    Shop by Category
+  </h2>
+  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
+    {[
+      { icon: <FaTshirt size={30} />, label: "Men's Wear" },
+      { icon: <FaLaptop size={30} />, label: "Electronics" },
+      { icon: <FaShoePrints size={30} />, label: "Footwear" },
+      { icon: <FaHatCowboy size={30} />, label: "Accessories" },
+      { icon: <FaGift size={30} />, label: "Gifts" },
+      { icon: <FaBox size={30} />, label: "Home" },
+      { icon: <FaClock size={30} />, label: "Watches" },
+      { icon: <FaHeadphones size={30} />, label: "Headphones" },
+      { icon: <FaHeart size={30} />, label: "Health" },
+      { icon: <FaMobileAlt size={30} />, label: "Mobile Phones" },
+      { icon: <FaStar size={30} />, label: "Top Rated" },
+      { icon: <FaCogs size={30} />, label: "Tools" },
+      { icon: <FaHeart size={30} />, label: "Health" },
+      { icon: <FaMobileAlt size={30} />, label: "Mobile Phones" },
+      { icon: <FaStar size={30} />, label: "Top Rated" },
+      { icon: <FaCogs size={30} />, label: "Tools" },
+    ].map((category, index) => (
+      <div key={index} className="flex flex-col items-center text-gray-800">
+        <div className="p-4 bg-gradient-to-r from-pink-100 to-sky-100 rounded-full shadow-lg mb-2 transition-transform transform hover:scale-110 hover:shadow-xl">
+          {category.icon}
         </div>
+        <span className="text-sm font-medium text-center">{category.label}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         <div className="bg-gray-200 py-12 mt-16 text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">
