@@ -12,7 +12,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
-import './Hero.css';
+
+
 import VideoSection from "./VideoSection";
 
 const slidesData = [
