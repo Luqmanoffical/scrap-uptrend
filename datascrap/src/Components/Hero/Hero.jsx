@@ -12,7 +12,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
-import './hero.css';
+import "../Css/Home.css";
+
 import VideoSection from "./VideoSection";
 
 const slidesData = [
@@ -101,7 +102,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
   <nav className="flex justify-between items-center bg-gray-800 p-4 text-white h-20">
     <div className="logo flex items-center space-x-2">
       <img src={logo} className="h-10" />

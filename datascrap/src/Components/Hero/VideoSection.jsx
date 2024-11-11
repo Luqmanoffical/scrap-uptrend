@@ -1,6 +1,5 @@
 import React from 'react';
 import shoppingads from '../../assets/shoppingads.mp4'
-import './Hero.css'
 
 const VideoSection = () => {
   return (

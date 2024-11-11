@@ -3,7 +3,7 @@
     padding: 10px 25px;
     font-size: 18px;
     font-weight: 500;
-
+  
     color: #1f2937;
     background-color: transparent;
     border: 2px solid transparent;
@@ -12,12 +12,12 @@
     text-align: center;
     z-index: 1;
     cursor: pointer;
-}
-
-.gradient-button::before {
+  }
+  
+  .gradient-button::before {
     content: '';
     position: absolute;
-
+  
     top: 0;
     left: 0;
     right: 0;
@@ -31,11 +31,11 @@
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
     z-index: -1;
-}
-
-
-
-.gradient-button:hover {
+  }
+  
+  
+  
+  .gradient-button:hover {
     background-color: #1a1a1a;
     color: white;
-}
+  }
