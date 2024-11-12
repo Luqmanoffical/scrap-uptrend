@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { productsData } from '../Server/api';
 import Footer from '../Footer/Footer.jsx';
 import { FaFilter } from "react-icons/fa";
-
+import Navbar from '../Hero/Hero.jsx'
 const CategoryPage = () => {
   const { category } = useParams();
   const navigate = useNavigate();
@@ -34,6 +34,7 @@ const filteredProducts = products.filter((product) => {
 
   return (
     <div className="bg-gray-200 ">
+      <Navbar/>
       <div className="p-7">
         <div className='flex justify-between'>
         <h1
