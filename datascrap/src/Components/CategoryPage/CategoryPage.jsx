@@ -4,7 +4,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { productsData } from '../Server/api';
 import Footer from '../Footer/Footer.jsx';
 import { FaFilter } from "react-icons/fa";
-import Navbar from '../Hero/Hero.jsx'
+import Navbar from '../Hero/Hero.jsx';
+import { BiDetail } from "react-icons/bi";
+
+
 const CategoryPage = () => {
   const { category } = useParams();
   const navigate = useNavigate();
@@ -35,7 +38,7 @@ const filteredProducts = products.filter((product) => {
   return (
     <div className="bg-gray-200 ">
       <Navbar/>
-      <div className="p-7">
+      <div className="p-14">
         <div className='flex justify-between'>
         <h1
           className="text-3xl text-gray-950 font-bold mb-6"
@@ -96,47 +99,54 @@ const filteredProducts = products.filter((product) => {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {filteredProducts.length === 0 ? (
             <p>No products found based on your filters.</p>
           ) : (
             filteredProducts.map((product) => (
-              <div
-                className="rounded-lg shadow-xl border-2 bg-gray-100 flex flex-col"
-                key={product.id}
-              >
+              <div 
+              className="rounded-lg flex flex-col relative group" 
+            
+              key={product.id}
+            >
+              <div className="relative w-full h-40 overflow-hidden rounded-md">
                 <img
-                  onClick={() => handleProductClick(product.id)}
-                  className="w-full h-48 object-cover overflow-hidden transition-transform transform hover:scale-105 rounded-t-md"
+                  // onClick={handleProductClick}
+                  className="w-full h-full object-cover transition-transform transform hover:scale-105"
                   src={product.image}
                   alt={product.name}
                 />
-                <div className="p-3 flex-1">
-                  <h3
-                    className="text-lg font-semibold"
-                    style={{
-                      fontFamily: 'Faculty Glyphic, Mona Sans, Roboto, sans-serif',
-                    }}
+                <div className="absolute bottom-2 right-2">
+                  <button
+                    onClick={handleProductClick}
+                    className="p-2 bg-white text-gray-800 rounded-full shadow transition-colors hover:bg-black hover:text-white"
                   >
-                    {product.name}
-                  </h3>
-                  <p className="text-sm text-gray-500">{product.description}</p>
-                  <div>
-                    <span className="text-lg font-bold">{product.price}</span> <br />
-                    <span className="text-xs text-gray-500">Shipping: {product.shippingFee}</span>
-                  </div>
-                  <div>
-                    <span className="text-yellow-500">
-                      {'★'.repeat(product.rating)}{'☆'.repeat(5 - product.rating)}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-3 flex justify-between">
-                  <button className="px-4 py-2 bg-[#d4af37] hover:bg-[#b8972f] text-white rounded-lg transition-transform transform hover:scale-105">
-                    Visit Store
+                    <BiDetail size={20} />
                   </button>
                 </div>
               </div>
+              <div className="p-3 flex-1">
+                <h3 className="text-sm" style={{ fontFamily: "Faculty Glyphic, Mona Sans, Roboto, sans-serif" }}>
+                  {product.name}
+                </h3>
+                <div>
+                  <span className="text-black">
+                    {"★".repeat(product.rating)}{"☆".repeat(5 - product.rating)}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-lg font-bold">{product.price}</span> <br />
+                  <span className="text-xs text-gray-500">Shipping: {product.shippingFee}</span>
+                </div>
+              </div>
+            
+              {/* Button Section, with hover effect on the entire card */}
+              <div className="px-3 flex justify-between relative group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button className=" bg-black rounded-2xl text-sm text-white font-semibold hover:bg-white hover:text-black border-2 px-3 py-2 border-black  pointer-events-none group-hover:pointer-events-auto">
+                  Visit Store
+                </button>
+              </div>
+            </div>
             ))
           )}
         </div>
