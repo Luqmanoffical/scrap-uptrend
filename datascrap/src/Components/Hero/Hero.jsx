@@ -129,13 +129,13 @@ const Navbar = () => {
   <nav className="flex justify-between items-center bg-[#c8c9ca] p-4  h-10">
   
   
-  <ul className="flex flex-1 justify-center gap-8 space-x-6 font-bold">
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Home</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Shop</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Categories</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Deals</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Contact Us</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Cart</a></li>
+  <ul className="flex flex-1 justify-center gap-8 space-x-6 font-bold font-poppins">
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Fashions</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Electronics</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Sports</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Accessories</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Gifts</a></li>
+    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Top rated</a></li>
   </ul>
 </nav>
 

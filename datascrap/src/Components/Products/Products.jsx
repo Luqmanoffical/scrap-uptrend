@@ -18,9 +18,9 @@ return(
     <img  onClick={handleProductClick}  className="w-full h-48 object-cover  overflow-hidden transition-transform transform hover:scale-105  rounded-t-md" src={product.image} alt={product.name} />
     <div className="p-3 flex-1">
       <h3 className="text-lg font-semibold"
-      style={{
-        fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }}
+      // style={{
+      //   fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
+      //  }}
       >{product.name}</h3>
       <p className="text-sm text-gray-500">{product.description}</p>
       <div>

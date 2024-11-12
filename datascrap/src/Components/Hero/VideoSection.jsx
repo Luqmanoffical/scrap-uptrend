@@ -14,7 +14,7 @@ const VideoSection = () => {
       />
 
       {/* Text Overlay */}
-      <div className="relative z-10 text-center text-white px-4">
+      <div className="relative z-10 text-center  text-white px-4">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
           Discover the Best Deals
         </h1>
