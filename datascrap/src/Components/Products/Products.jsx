@@ -55,7 +55,7 @@ return(
 
   {/* Button Section, with hover effect on the entire card */}
   <div className="px-3 flex justify-between relative group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-    <button className=" bg-black rounded-2xl text-white hover:bg-white hover:text-black border-2 px-3 py-2 border-black  pointer-events-none group-hover:pointer-events-auto">
+    <button className=" bg-black rounded-2xl text-sm text-white font-semibold hover:bg-white hover:text-black border-2 px-3 py-2 border-black  pointer-events-none group-hover:pointer-events-auto">
       Visit Store
     </button>
   </div>
