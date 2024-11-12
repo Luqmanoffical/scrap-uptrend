@@ -5,8 +5,9 @@ export default {
     extend: {
       fontFamily: {
         "source-sans": ["Source Sans 3", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+       poppins: ["Poppins", "sans-serif"],
+       
       },
       colors: {
         
