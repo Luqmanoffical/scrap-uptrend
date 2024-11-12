@@ -15,7 +15,7 @@ function Sidebar() {
         <button onClick={toggleSidebar} className="text-2xl">
           {isOpen ? <FiAlignLeft /> : <FiAlignRight />}
         </button>
-        {isOpen && <h1 className="text-2xl font-semibold">Admin Panel</h1>}
+        {isOpen && <h1 className="text-2xl font-semibold"></h1>}
       </div>
       
       <ul className="flex-1 space-y-4 px-6 py-4">
