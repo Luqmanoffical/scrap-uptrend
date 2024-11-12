@@ -118,7 +118,7 @@ const filteredProducts = products.filter((product) => {
                 />
                 <div className="absolute bottom-2 right-2">
                   <button
-                    onClick={handleProductClick}
+                       onClick={() => handleProductClick(product.id)}
                     className="p-2 bg-white text-gray-800 rounded-full shadow transition-colors hover:bg-black hover:text-white"
                   >
                     <BiDetail size={20} />
