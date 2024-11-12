@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import {productsData} from "../Server/api.js"
 import Footer from '../Footer/Footer.jsx'
 import '../Css/Home.css'
-import { BiDetail } from "react-icons/bi";
 
 const ProductCard = ({ product } , ) => {
   const navigate = useNavigate();
