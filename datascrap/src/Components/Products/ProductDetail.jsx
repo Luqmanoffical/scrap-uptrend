@@ -25,8 +25,8 @@ const ProductDetail = () => {
           <div className="space-y-4">
             <h1 className="text-3xl font-semibold">{product.name}</h1>
             <p className="text-lg text-gray-600">{product.description}</p>
-            <div className="text-xl font-bold text-gray-800">
-              Price: <span className="text-lg text-[#d4af37]">{product.price}</span>
+            <div className="text-xl font-bold text-gray-950">
+              Price: <span className="text-2xl font-bold ">{product.price}</span>
             </div>
             <p className="text-sm text-gray-500">Shipping: {product.shippingFee}</p>
             {product.sizes?  <div className="mt-4">
@@ -48,7 +48,7 @@ const ProductDetail = () => {
               </ul> 
             </div>: ""  }
             <div className="mt-6">
-              <button className="bg-[#d4af37] text-white px-6 py-2 rounded-lg hover:bg-[#b8972f]">
+              <button className="bg-black  text-sm text-white font-semibold hover:bg-white hover:text-black border-2 px-3 py-2 border-black">
                 Visit Store
               </button>
             </div>
