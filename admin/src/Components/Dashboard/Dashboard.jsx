@@ -2,9 +2,9 @@ import React from 'react';
 
 function Dashboard() {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-semibold mb-4">Dashboard</h2>
-      <p>Welcome .</p>
+    <div className="p-6">
+      <h2 className="text-3xl font-semibold text-gray-800">Dashboard</h2>
+      <p className="mt-4 text-lg">Welcome to your dashboard. Here you can view your overall performance.</p>
     </div>
   );
 }
