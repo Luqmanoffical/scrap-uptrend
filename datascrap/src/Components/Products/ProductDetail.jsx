@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { productsData } from "../Server/api.js";
 import Footer from '../Footer/Footer.jsx';
-
+import Header from "../Header/Header.jsx";
 const ProductDetail = () => {
   const { productId } = useParams();
   const product = Object.values(productsData).flat().find((prod) => prod.id === parseInt(productId));
@@ -12,6 +12,8 @@ const ProductDetail = () => {
   }
 
   return (
+    <>
+    <Header />
     <div className="bg-gray-100 py-10">
       <div className="container mx-auto  p-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -55,7 +57,7 @@ const ProductDetail = () => {
       </div>
       <Footer />
     </div>
-  );
+    </>  );
 };
 
 export default ProductDetail;

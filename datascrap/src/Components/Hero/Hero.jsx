@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import {
-FaBars, FaTimes, FaSearch, FaTshirt, FaLaptop, FaShoePrints,
-FaHatCowboy, FaGift, FaBox, FaClock, FaHeadphones,
-FaHeart, FaMobileAlt, FaStar, FaCogs
+  FaBars, FaTimes, FaSearch, FaTshirt, FaLaptop, FaShoePrints,
+  FaHatCowboy, FaGift, FaBox, FaClock, FaHeadphones,
+  FaHeart, FaMobileAlt, FaStar, FaCogs
 } from "react-icons/fa";
-import logo from '../../assets/logo.png'
 import Image1 from "../../assets/women.png";
 import Image2 from "../../assets/shopping.png";
 import Image3 from "../../assets/sale.png";
@@ -12,29 +11,23 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
-import '../Css/Home.css'
+import "../Css/Home.css";
 import { useNavigate } from "react-router-dom";
 import VideoSection from "./VideoSection";
+import mens from "../../assets/mens.webp";
+import footwear from "../../assets/footwear.webp";
+import access from "../../assets/access.jpg";
+import gifts from "../../assets/gifts.jpg";
+import watches from "../../assets/watches.jpg";
+import mobile from "../../assets/mobile.webp";
+import headphone from "../../assets/headphone.jpeg";
+import health from "../../assets/health.jpeg";
+import Navbar from "../Header/Header";
 
 const slidesData = [
-  {
-    id: 1,
-    img: Image1,
-    title: "Upto 50% off on all Men's Wear",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 2,
-    img: Image2,
-    title: "30% off on all Women's Wear",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 3,
-    img: Image3,
-    title: "70% off on all Products Sale",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
+  { id: 1, img: Image1, title: "Upto 50% off on all Men's Wear", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { id: 2, img: Image2, title: "30% off on all Women's Wear", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { id: 3, img: Image3, title: "70% off on all Products Sale", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
 ];
 
 const Slide = ({ img, title, description, handleOrderPopup }) => (
@@ -69,8 +62,10 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] lg:min-h-[400px] sm:min-h-[650px] bg-gray-200 flex justify-center items-center">
-      <div className="h-[750px] w-[750px] bg-gradient-to-r from-[#ecb454] via-[#ecb454] absolute -inset-y-8 -right-32 -top-40 rounded-3xl transform rotate-45 z-0"></div>
+    <div className="relative overflow-hidden min-h-[550px] lg:min-h-[300px] sm:min-h-[650px] bg-[#ff5b2ecb] flex justify-center items-center">
+      {/* Background Shape 1 */}
+      <div className="h-[750px] w-[750px] bg-gradient-to-r from-[#ff5c2e] via-[#ff5c2e] absolute -inset-y-8 -right-32 -top-60 rounded-3xl transform rotate-45 z-0"></div>
+      {/* Background Shape 2 */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 opacity-40 z-0"></div>
       <div className="container pb-8 sm:pb-0 relative z-10">
         <Slider {...settings}>
@@ -89,143 +84,54 @@ const Hero = ({ handleOrderPopup }) => {
   );
 };
 
-const Navbar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
- const navigate =useNavigate();
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-  function handleSearchQuery(){
-
-    console.log(searchQuery);
-  }
-
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
+const Home = () => {
   return (
-    <div className="relative overflow-x-hidden">
-  <nav className="flex justify-between items-center bg-gray-800 p-4 text-white h-20">
-    <div className="logo flex items-center space-x-2">
-      <img src={logo} className="h-10" />
-      <h1 className="text-xl font-bold">UpTrend.</h1>
-    </div>
-    <div className="flex-1 flex justify-center mx-8">
-      <div className="relative w-full sm:w-96">
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          placeholder="Search for products..."
-          className="w-full pl-12 pr-7 py-4 rounded-full bg-gray-700 text-white focus:outline-none"
-        />
-        <button onClick={handleSearchQuery}>
-        <FaSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white" size={20} />
-        </button>  </div>
-    </div>
-    <button onClick={toggleSidebar} className="text-white p-2 rounded-full hover:bg-gray-700">
-      {sidebarOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-    </button>
-  </nav>
-
-
-  <nav className="flex justify-between items-center bg-[#c8c9ca] p-4  h-10">
-  
-  
-  <ul className="flex flex-1 justify-center gap-8 space-x-6 font-bold font-poppins">
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Fashions</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Electronics</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Sports</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Accessories</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Gifts</a></li>
-    <li><a href="#" className="text-gray-800 hover:text-[#ecb454]">Top rated</a></li>
-  </ul>
-</nav>
-
-
-
-
-
-  {/* Sidebar with Animation */}
-  <div
-    className={`fixed inset-0 z-50 bg-black bg-opacity-70 flex justify-end transform transition-all duration-300 ${
-      sidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-    }`}
-  >
-    <div
-      className={`w-64 bg-black text-white p-6 space-y-4 transform transition-transform duration-300 ${
-        sidebarOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}
-    >
-      <h2 className="text-2xl font-bold">Categories</h2>
-      <ul>
-        <li><a href="#" className="block py-2">Men's Wear</a></li>
-        <li><a href="#" className="block py-2">Women's Wear</a></li>
-        <li><a href="#" className="block py-2">Accessories</a></li>
-        <li><a href="#" className="block py-2">Sale</a></li>
-        <li><a href="#" className="block py-2">Men's Wear</a></li>
-        <li><a href="#" className="block py-2">Women's Wear</a></li>
-        <li><a href="#" className="block py-2">Accessories</a></li>
-        <li><a href="#" className="block py-2">Sale</a></li>
-        <li><a href="#" className="block py-2">Men's Wear</a></li>
-        <li><a href="#" className="block py-2">Women's Wear</a></li>
-        <li><a href="#" className="block py-2">Accessories</a></li>
-        <li><a href="#" className="block py-2">Sale</a></li>
-        <li><a href="#" className="block py-2">Men's Wear</a></li>
-        <li><a href="#" className="block py-2">Women's Wear</a></li>
-        <li><a href="#" className="block py-2">Accessories</a></li>
-        <li><a href="#" className="block py-2">Sale</a></li>
-        <li><a href="#" className="block py-2">Men's Wear</a></li>
-        <li><a href="#" className="block py-2">Women's Wear</a></li>
-       
-      
-      </ul>
-      <button onClick={toggleSidebar} className="absolute top-4 right-4 text-white " >
-        <FaTimes size={24} />
-      </button>
-    </div>
-  </div>
-
-
+    <div>
+      <Navbar />
       <Hero handleOrderPopup={() => {}} />
-
-      <div className="bg-[#c8c9cab2]  ">
-      <div className="container mx-auto flex flex-col items-center">
-  <h2 className="text-2xl p-10 font-semibold text-center text-gray-800">
-    Shop by Category
-  </h2>
-  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6">
-    {[
-      { icon: <FaTshirt size={30} />, label: "Men's Wear" },
-      { icon: <FaLaptop size={30} />, label: "Electronics" },
-      { icon: <FaShoePrints size={30} />, label: "Footwear" },
-      { icon: <FaHatCowboy size={30} />, label: "Accessories" },
-      { icon: <FaGift size={30} />, label: "Gifts" },
-      { icon: <FaBox size={30} />, label: "Home" },
-      { icon: <FaClock size={30} />, label: "Watches" },
-      { icon: <FaHeadphones size={30} />, label: "Headphones" },
-      { icon: <FaHeart size={30} />, label: "Health" },
-      { icon: <FaMobileAlt size={30} />, label: "Mobile Phones" },
-      { icon: <FaStar size={30} />, label: "Top Rated" },
-      { icon: <FaCogs size={30} />, label: "Tools" },
-      { icon: <FaHeart size={30} />, label: "Health" },
-      { icon: <FaMobileAlt size={30} />, label: "Mobile Phones" },
-      { icon: <FaStar size={30} />, label: "Top Rated" },
-      { icon: <FaCogs size={30} />, label: "Tools" },
-    ].map((category, index) => (
-      <div key={index} className="flex flex-col items-center text-gray-800">
-        <div className="p-4 bg-gradient-to-r from-pink-100 to-sky-100 rounded-full shadow-lg mb-2 transition-transform transform hover:scale-110 hover:shadow-xl">
-          {category.icon}
+      <div className="bg-[#c8c9cab2]">
+        <div className="container mx-auto flex flex-col items-center p-8">
+          <h2 className="text-4xl font-bold text-gray-800 mb-10 text-center">
+            Shop by Category
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-full">
+            {[
+              { image: mens, label: "Men's Wear" },
+              { image: mens, label: "Electronics" },
+              { image: footwear, label: "Footwear" },
+              { image: access, label: "Accessories" },
+              { image: gifts, label: "Gifts" },
+              { image: mens, label: "Home" },
+              { image: watches, label: "Watches" },
+              { image: headphone, label: "Headphones" },
+              { image: health, label: "Health" },
+              { image: mobile, label: "Mobile Phones" },
+            ].map((category, index) => (
+              <div
+                key={index}
+                className="relative group h-60 lg:h-80 w-full overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              >
+                <img
+                  src={category.image}
+                  alt={category.label}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90"></div>
+                {/* Centered Label */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="bg-white bg-opacity-90 text-gray-900 text-lg font-semibold rounded-full py-1 px-4 shadow-md transition duration-300 transform group-hover:scale-110 group-hover:bg-opacity-100">
+                    {category.label}
+                  </span>
+                </div>
+                {/* Bottom CTA */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-90 text-center text-white font-medium text-sm tracking-wide transition-all duration-300 ease-in-out transform group-hover:translate-y-0 translate-y-full">
+                  Explore {category.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <span className="text-sm font-medium text-center">{category.label}</span>
-      </div>
-    ))}
-  </div>
-</div>
-
-
         <div className="bg-gray-200 py-12 mt-16 text-center">
           <h2 className="text-3xl font-semibold text-gray-800 mb-8">
             Explore Millions of Offerings Tailored to Your Business Needs
@@ -251,9 +157,9 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <VideoSection/>
+      <VideoSection />
     </div>
   );
 };
 
-export default Navbar;
+export default Home;

@@ -1,13 +1,10 @@
-
-
-
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { productsData } from '../Server/api';
 import Footer from '../Footer/Footer.jsx';
 import { FaFilter } from "react-icons/fa";
-import Navbar from '../Hero/Hero.jsx';
 import { BiDetail } from "react-icons/bi";
+import Header from '../Header/Header.jsx';
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -37,7 +34,7 @@ const CategoryPage = () => {
 
   return (
     <div className="bg-gray-200 relative">
-      <Navbar />
+      <Header />
       <div className="p-14">
         <div className="flex justify-between">
           <h1
