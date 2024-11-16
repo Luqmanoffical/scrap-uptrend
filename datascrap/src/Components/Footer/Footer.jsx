@@ -1,6 +1,4 @@
 import React from "react";
-// import footerLogo from "../../assets/logo.png";
-import Banner from "../../assets/footer-pattern.jpg";
 import {
   FaFacebook,
   FaInstagram,
@@ -10,10 +8,7 @@ import {
 } from "react-icons/fa";
 
 const BannerImg = {
-  backgroundImage: `url(${Banner})`,
-  backgroundPosition: "bottom",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
+  backgroundColor: "#FA812F",
   height: "100%",
   width: "100%",
 };
@@ -37,89 +32,109 @@ const FooterLinks = [
   },
 ];
 
+const FooterSupportLinks = [
+  {
+    title: "Help center",
+    link: "/#",
+  },
+  {
+    title: "Terms & services",
+    link: "/#",
+  },
+  {
+    title: "Legal",
+    link: "/#",
+  },
+  {
+    title: "Privacy policy",
+    link: "/#",
+  },
+  {
+    title: "Faq's",
+    link: "/#",
+  }
+];
+
+
 const Footer = () => {
   return (
     <div style={BannerImg} className="text-white">
-      <div className="container">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
-          {/* company details */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
+      <div className="container mx-auto px-4">
+        <div data-aos="zoom-in" className="grid gap-5 lg:grid-cols-3 py-8">
+          {/* Company details */}
+          <div className="py-2 text-center md:text-left">
+            <h1 className="text-xl font-bold">
               <img src={""} alt="" className="max-w-[50px]" />
               UPTrend.
             </h1>
-            <p>
+            <p className="text-center md:text-left">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
               beatae ea recusandae blanditiis veritatis.
             </p>
           </div>
 
           {/* Footer Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
+            <div className="py-2">
+              <h1 className="text-lg font-bold mb-3">Support</h1>
+              <ul className="flex flex-col gap-2">
+                {FooterSupportLinks.map((link) => (
+                  <li
+                    className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300"
+                    key={link.title}
+                  >
+                    <span>{link.title}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="py-2">
+              <h1 className="text-lg font-bold mb-3">Important Links</h1>
+              <ul className="flex flex-col gap-2">
+                {FooterLinks.map((link) => (
+                  <li
+                    className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300"
+                    key={link.title}
+                  >
+                    <span>{link.title}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            {/* social links */}
-
-            <div>
-              <div className="flex items-center gap-3 mt-6">
+            {/* Social links */}
+            <div className="py-2">
+              <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
                 <a href="#">
-                  <FaInstagram className="text-3xl" />
+                  <FaInstagram className="text-2xl sm:text-3xl" />
                 </a>
                 <a href="#">
-                  <FaFacebook className="text-3xl" />
+                  <FaFacebook className="text-2xl sm:text-3xl" />
                 </a>
                 <a href="#">
-                  <FaLinkedin className="text-3xl" />
+                  <FaLinkedin className="text-2xl sm:text-3xl" />
                 </a>
               </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-col gap-2 text-sm">
+                <div className="flex items-center gap-2 justify-center md:justify-start">
                   <FaLocationArrow />
                   <p>Glaxit, Punjab Pakistan</p>
                 </div>
-                <div className="flex items-center gap-3 mt-3">
+                <div className="flex items-center gap-2 justify-center md:justify-start">
                   <FaMobileAlt />
-                  <p>+91 123456789</p>
+                  <p>+92-123456789</p>
                 </div>
-                <div className="flex items-center gap-3 mt-3">
-                  <p>Design and Develop By <span style={{
-        fontFamily: " Faculty Glyphic, Mona Sans, Roboto, sans-serif" 
-       }} className="text-green-600 font-bold">Glaxit</span> </p>
-                </div>
-                
+                <p>
+                  Design and Develop By{" "}
+                  <span
+                    style={{
+                      fontFamily: "Faculty Glyphic, Mona Sans, Roboto, sans-serif",
+                    }}
+                    className="font-bold cursor-pointer hover:text-[#1a957a] transition-colors duration-300"
+                  >
+                    Glaxit
+                  </span>
+                </p>
               </div>
             </div>
           </div>
